@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <table class = "table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+            {% for ls in bls %}
+            <tr>
+                {% for info in ls %}
+                <th>
+                    {{info}}
+                </th>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </thead>
+        <tr>
+            <td colspan="4">CASH</td>
+            <td>{{var1}}</td>
+        </tr>
+        <tr>
+            <td colspan="4"></td>
+            <td>{{var2}}</td>
+        </tr>
+    </table>
+{% endblock %}

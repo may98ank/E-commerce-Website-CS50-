@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <table class = "table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Transacted</th>
+            </tr>
+            {% for ls in bls %}
+            <tr>
+                {% for info in ls %}
+                <th>
+                    {{info}}
+                </th>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </thead>
+    </table>
+{% endblock %}

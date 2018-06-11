@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <main class = "container p-5" align = "center">
+        <p>
+                        A share of {{ q.name }} ({{ q.symbol }}) costs {{ q.price }}.
+                </p>
+    </main>
+{% endblock %}
